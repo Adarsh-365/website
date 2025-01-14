@@ -5,102 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adarsh Tayde</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    /* Sidebar styling for larger screens */
-    .sidebar {
-      width: 300px;
-      height: 100vh; /* Full height */
-      position: fixed; /* Stay fixed on the side */
-      top: 0;
-      left: 0;
-      background-color: #f8f9fa; /* Light background */
-      border-right: 1px solid #ddd;
-      padding: 20px;
-      overflow-y: auto; /* Scroll if content overflows */
-      transition: transform 0.3s ease; /* Smooth toggle effect */
-    }
-
-    /* Main content styling */
-    .main-content {
-      margin-left: 300px; /* Matches the sidebar width */
-      padding: 20px;
-      transition: margin-left 0.3s ease; /* Smooth toggle effect */
-    }
-
-    /* Responsive behavior */
-    @media (max-width: 768px) {
-      .sidebar {
-        transform: translateX(-100%); /* Hide sidebar on small screens */
-      }
-
-      .sidebar.show {
-        transform: translateX(0); /* Show sidebar when toggled */
-      }
-
-      .main-content {
-        margin-left: 0; /* Remove margin when sidebar is hidden */
-      }
-    }
-
-    .toggle-btn {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      z-index: 1050; /* Ensure it stays above everything */
-    }
-
-    #experience {
-        padding: 20px;
-      }
-    
-      .experience-item {
-        border: 1px solid #ddd;
-        padding: 15px;
-        margin-bottom: 20px;
-        border-radius: 5px;
-        background-color: #f8f9fa;
-      }
-    
-      .experience-item h5 {
-        font-size: 1.25rem;
-        margin-bottom: 10px;
-      }
-    
-      .experience-item p {
-        font-size: 1rem;
-        margin-bottom: 5px;
-      }
-    
-      .experience-item p strong {
-        font-weight: bold;
-      }
-
-      #projects {
-        padding: 20px;
-      }
-    
-      .project-item {
-        border: 1px solid #ddd;
-        padding: 15px;
-        margin-bottom: 20px;
-        border-radius: 5px;
-        background-color: #f8f9fa;
-      }
-    
-      .project-item h5 {
-        font-size: 1.25rem;
-        margin-bottom: 10px;
-      }
-    
-      .project-item p {
-        font-size: 1rem;
-        margin-bottom: 5px;
-      }
-    
-      .project-item p strong {
-        font-weight: bold;
-      }
-  </style>
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
   <!-- Toggle Button for Small Screens -->
@@ -124,7 +29,7 @@
     <section id="about">
       <h1>HELLO !!!</h1>
       <h1>I am Adarsh Tayde,</h1>
-      <ul>
+      <ul class="horizontal-list">
         <li>
             <a href="www.nitw.ac.in">NIT Warangal</a>
         </li>
@@ -138,7 +43,7 @@
       </ul>
 
 
-    <p>
+    <p style="margin-top: 20px;">
         Hey there!, I'm a Software Developer with 2 years of experience and a pursuing Master's degree in Computer Science,
          specializing in information Security . Skilled in languages from Python ,C++ and JAVA , A programming enthusiast having an interest in competitive coding 🏋️.
           Have a great quest for knowledge and exploring new things fascinates me 🧭..
@@ -149,36 +54,30 @@
 
    
     <section>
-        <div class="container text-center">
-            <div class="row">
-              <div class="col">
-              
-                <img src="dp.jpg" alt="Italian Trulli">
-              </div>
-              <div class="col">
-                
-                <h1 align='left'>Software Developer.</h1>
-                    <p align='left'>I am a Software Developer 
-                    </p>
-                    <ul>
-                        <li> <strong>Birthday:</strong> <span> Feb 2000</span></li>
-                        <li> <strong>Portfolio:</strong> <span> <a href='https://www.adarshtayde.com'>adarshtayde.com</a></span></li>
-                        <li> <strong>Cotact:</strong> <span> +91 7378693514</span></li>
-                        <li> <strong>LOC:</strong> <span>Navi Mumbai </span></li>
-                        <li> <strong>Age:</strong> <span> 25</span></li>
-                        <li> <strong>Email:</strong> <span> adarshtayde9011@gamil.com</span></li>
-                        <li> <strong>Degree:</strong> <span> Mtech</span></li>
-                        <li> <strong>GitHub:</strong> <span>  <a href='https://www.github.com/adarsh-365/'>www.adarshtayde.com</a></span></li>
-
-                    </ul>
-
-
-
-
-              </div>
-              
-            </div>
-          </div>
+      <div class="container d-flex align-items-center my-section">
+        <div class="image-container">
+          <img src="dp.jpg" alt="Profile Picture" class="profile-img">
+        </div>
+        <div class="text-container">
+          <h1 class="developer-title">Software Developer</h1>
+          <p class="description">
+            I am a Software Developer with expertise in software development, web development, cryptography, and hardware communication protocols. 
+            I have contributed to projects like Hydro-Power Plant Simulators and Level and Flow Control System Simulators. Additionally, 
+            I specialize in Python development, creating tools for hardware diagnostics and simulation, while constantly learning and exploring new technologies.
+          </p>
+          <ul class="info-list">
+            <li><strong>Birthday:</strong> Feb 2000</li>
+            <li><strong>Portfolio:</strong> <a href="https://www.adarshtayde.com">adarshtayde.com</a></li>
+            <li><strong>Contact:</strong> +91 7378693514</li>
+            <li><strong>Location:</strong> Navi Mumbai</li>
+            <li><strong>Age:</strong> 25</li>
+            <li><strong>Email:</strong> adarshtayde9011@gmail.com</li>
+            <li><strong>Degree:</strong> M.Tech</li>
+            <li><strong>GitHub:</strong> <a href="https://www.github.com/adarsh-365/">www.github.com/adarsh-365/</a></li>
+          </ul>
+        </div>
+      </div>
+      
     </section>
 
     <section id="experience" class="mt-5">
