@@ -130,7 +130,6 @@ body {
   color: #ff9f1c; /* Highlight on hover */
 }
 
-
 /* Horizontal list styling */
 .horizontal-list {
   display: flex; /* Horizontal layout */
@@ -147,6 +146,9 @@ body {
   border-radius: 10px; /* Rounded corners for each item */
   padding: 10px 15px; /* Inner spacing for better visuals */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex; /* Allow icon and text to be aligned horizontally */
+  align-items: center; /* Vertically center the icon and text */
+  gap: 10px; /* Space between the icon and text */
 }
 
 /* Links styling */
@@ -154,16 +156,23 @@ body {
   text-decoration: none; /* Remove underline */
   color: #fff; /* White text for contrast */
   font-weight: bold; /* Bold text */
-  display: block; /* Ensure the entire item is clickable */
+  display: flex; /* Make the link a flex container */
+  align-items: center; /* Vertically align the icon and text */
   text-align: left; /* Align text to the left */
   transition: color 0.3s ease; /* Smooth color change on hover */
 }
 
 /* Hover effect for links */
 .horizontal-list a:hover {
-  color: #ffcccb; /* Light coral on hover */
+  color: #050000; /* Light coral on hover */
+
 }
 
+/* Icon styling */
+.horizontal-list .icon-park--local {
+  font-size: 20px; /* Adjust icon size */
+  color: white; /* Icon color */
+}
 
 /* Styling for the section */
 .my-section {
