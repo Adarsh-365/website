@@ -3,12 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adarsh Tayde</title>
+  <title> Adarsh Tayde</title>
+  <link rel="icon" href="https://www.svgrepo.com/show/349485/python.svg" type="image/svg+xml">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <link href="st12.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
 </head>
@@ -20,11 +26,16 @@
 
   <!-- Sidebar -->
   <div class="sidebar" id="sidebar">
+    <div class="image-container">
+      <img src="dp.jpg" alt="Profile Picture" class="profile-img1">
+    </div>
     <h5 class="text-center">Adarsh Tayde</h5>
     <ul class="list-unstyled">
       <li><a href="#about" class="text-decoration-none">About Me</a></li>
       <li><a href="#skills" class="text-decoration-none">Skills</a></li>
       <li><a href="#projects" class="text-decoration-none">Projects</a></li>
+      <li><a href="#projects" class="text-decoration-none">Experience</a></li>
+      <li><a href="#projects" class="text-decoration-none">Education</a></li>
      
     </ul>
   </div>
@@ -116,7 +127,7 @@
     <section id="skills" class="mt-5">
         <h2>Skills</h2>
         <ul class="skills-list">
-          <li><span class="iconify" data-icon="logos:python" data-inline="false"></span> Python</li>
+          <li><span class="iconify" data-icon="logos:python" data-inline="false"></span><a href="python_project.html" data-bs-toggle="tooltip" data-bs-title="Click To Check Projects"> Python </a></li>
           <li><span class="vscode-icons--file-type-c" data-inline="false"></span> C Programming</li>
           <li><span class="vscode-icons--file-type-cpp3" data-inline="false"></span> C++ Programming</li>
           <li><span class="iconify" data-icon="logos:java" data-inline="false"></span> JAVA Development</li>
@@ -130,6 +141,7 @@
           <li><span class="mdi--internet-protocol-outline" data-inline="false"></span> Hardware Communication Protocols (TCP, UDP, Modbus)</li>
           <li><span class="carbon--gui" data-inline="false"></span> GUI Frameworks (Tkinter, PyQt)</li>
           <li><span class="material-symbols--simulation"  data-inline="false"></span> Simulation Tools (MATLAB, LabVIEW)</li>
+          <li><span class="devicon--firebase-wordmark"  data-inline="false"></span> Firebase Database</li>
         </ul>
         
       </section>
@@ -190,6 +202,11 @@
     // Toggle Sidebar on Small Screens
     const toggleBtn = document.getElementById('toggleSidebar');
     const sidebar = document.getElementById('sidebar');
+   
+    // Initialize all tooltips on the page
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    
 
     toggleBtn.addEventListener('click', () => {
       sidebar.classList.toggle('show');
